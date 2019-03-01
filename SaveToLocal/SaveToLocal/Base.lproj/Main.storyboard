@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LFS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yv0-J4-eI7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="316.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLM-0P-5kQ">
+                                <rect key="frame" x="0.0" y="336.5" width="375" height="316.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo provided by Unsplash" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-Ae-Dtv">
+                                <rect key="frame" x="0.0" y="653" width="375" height="14"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rLM-0P-5kQ" firstAttribute="bottom" secondItem="6G8-Ae-Dtv" secondAttribute="top" id="25L-is-pgx"/>
+                            <constraint firstItem="Yv0-J4-eI7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6tR-RB-BBS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6G8-Ae-Dtv" secondAttribute="bottom" id="AVS-VU-CNx"/>
+                            <constraint firstItem="Yv0-J4-eI7" firstAttribute="height" secondItem="rLM-0P-5kQ" secondAttribute="height" id="FdV-hu-UFv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6G8-Ae-Dtv" secondAttribute="trailing" id="MXD-5p-y3U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yv0-J4-eI7" secondAttribute="trailing" id="Ocq-UA-TEa"/>
+                            <constraint firstItem="rLM-0P-5kQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W8y-T1-NY6"/>
+                            <constraint firstItem="6G8-Ae-Dtv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YEY-PC-wgb"/>
+                            <constraint firstItem="Yv0-J4-eI7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ysm-Bh-SaQ"/>
+                            <constraint firstItem="rLM-0P-5kQ" firstAttribute="top" secondItem="Yv0-J4-eI7" secondAttribute="bottom" id="j3e-TG-Egy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rLM-0P-5kQ" secondAttribute="trailing" id="rol-PA-bWx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="attributionLabel" destination="6G8-Ae-Dtv" id="C0f-so-AGa"/>
+                        <outlet property="imageView" destination="rLM-0P-5kQ" id="lII-r2-v2j"/>
+                        <outlet property="webView" destination="Yv0-J4-eI7" id="6MG-WB-mgr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="83.208395802098963"/>
+        </scene>
+    </scenes>
+</document>
